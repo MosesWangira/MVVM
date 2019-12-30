@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/big_padding"
         android:layout_marginBottom="@dimen/big_padding"
-        android:fontFamily="sans-serif-light"
         android:hint="@string/title"
+        android:maxLength="25"
         android:inputType="textAutoComplete"
         android:padding="@dimen/small_padding"
         android:textSize="18sp" />
@@ -24,11 +24,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/big_padding"
         android:layout_marginBottom="@dimen/big_padding"
-        android:fontFamily="sans-serif-light"
         android:hint="@string/hint_word"
-        android:inputType="textAutoComplete"
+        android:inputType="textMultiLine"
         android:padding="@dimen/small_padding"
         android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/urgency_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_padding"
+        android:layout_marginBottom="@dimen/big_padding"
+        android:hint="@string/urgency"
+        android:inputType="number"
+        android:padding="@dimen/small_padding"
+        android:textSize="18sp" />
+
 
     <Button
         android:id="@+id/button_save"

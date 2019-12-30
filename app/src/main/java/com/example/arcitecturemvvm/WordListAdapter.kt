@@ -17,6 +17,7 @@ class WordListAdapter internal constructor(
     inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val wordTitleView: TextView = itemView.findViewById(R.id.titleView)
         val wordItemView: TextView = itemView.findViewById(R.id.textView)
+        val urgencyItemView: TextView = itemView.findViewById(R.id.urgencyView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
@@ -26,6 +27,7 @@ class WordListAdapter internal constructor(
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
         val current = words[position]
+        holder.urgencyItemView.text= current.urgency.toString()
         holder.wordTitleView.text = current.title
         holder.wordItemView.text = current.word
     }

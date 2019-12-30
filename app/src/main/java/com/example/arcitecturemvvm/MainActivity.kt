@@ -1,12 +1,10 @@
 package com.example.arcitecturemvvm
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -27,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             val intent = Intent(this@MainActivity, NewWordActivity::class.java)
-            startActivityForResult(intent, newWordActivityRequestCode)
+//            startActivityForResult(intent, newWordActivityRequestCode)
+            startActivity(intent)
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
@@ -46,36 +45,26 @@ class MainActivity : AppCompatActivity() {
             // Update the cached copy of the words in the adapter.
             words?.let { adapter.setWords(it) }
         })
+
+
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if  (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
-            data?.getStringExtra(NewWordActivity.EXTRA_REPLY)?.let {
-
-//                val intent = intent
-//                val tit = intent.getStringExtra(NewWordActivity.EXTRA_REPLY1)
-
-
-//                val extras = intent.extras
-//                val my_title = extras!!.getString("EXTRA_TITLE")
-
-                val m = data.getStringExtra(NewWordActivity.EXTRA_SEND)
-                val title_of_note=intent.getStringExtra("TITLE")
-                Toast.makeText(this@MainActivity, m, Toast.LENGTH_SHORT).show()
-
-                val word = Word(it, "Altruism")
-                wordViewModel.insert(word)
-            }
-        } else {
-            Toast.makeText(
-                applicationContext,
-                R.string.empty_not_saved,
-                Toast.LENGTH_LONG
-            ).show()
-        }
-    }
+//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//        super.onActivityResult(requestCode, resultCode, data)
+//
+//        if  (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
+//            data?.getStringExtra(NewWordActivity.EXTRA_REPLY)?.let {
+//                val word = Word(it, "title")
+//                wordViewModel.insert(word)
+//            }
+//        } else {
+//            Toast.makeText(
+//                applicationContext,
+//                R.string.empty_not_saved,
+//                Toast.LENGTH_LONG
+//            ).show()
+//        }
+//    }
 
     /**
      * create option menu
@@ -109,3 +98,16 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+
+//                val intent = intent
+//                val tit = intent.getStringExtra(NewWordActivity.EXTRA_REPLY1)
+
+
+//                val extras = data.extras
+//                val my_title = extras!!.getString("EXTRA_SEND")
+//
+//                val m = data.getStringExtra("EXTRA_SEND")
+//                val title_of_note=intent.getStringExtra("TITLE")
+
+//                val profileName=intent.getStringExtra("Username")
+//                Toast.makeText(this@MainActivity, profileName, Toast.LENGTH_SHORT).show()

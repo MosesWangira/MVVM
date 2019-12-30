@@ -39,7 +39,7 @@ abstract class WordRoomDatabase : RoomDatabase() {
             super.onOpen(db)
             INSTANCE?.let { database ->
                 scope.launch {
-                    populateDatabase(database.wordDao())
+//                    populateDatabase(database.wordDao())
                 }
             }
         }
@@ -48,9 +48,9 @@ abstract class WordRoomDatabase : RoomDatabase() {
             // Delete all content here.
             wordDao.deleteAll()
 
-            var word = Word("Hello", "I love this")
-
-            wordDao.insert(word)
+//            var word = Word("Hello", "I love this")
+//
+//            wordDao.insert(word)
             /**
              * // Add sample words.
              * var word = Word("Hello")

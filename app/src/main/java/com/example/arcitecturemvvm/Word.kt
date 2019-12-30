@@ -12,5 +12,7 @@ import androidx.room.PrimaryKey
 class Word(
     @PrimaryKey
     @ColumnInfo(name = "word")
-    val word: String,
-    val title: String?)
+    var word: String,
+    var title: String,
+    var urgency: Int
+    )

@@ -1,5 +1,6 @@
 package com.example.arcitecturemvvm
 
+import android.icu.text.CaseMap
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
@@ -23,7 +24,7 @@ interface WordDao {
      * Use a return value of type LiveData in your method description,
      * and Room generates all necessary code to update the LiveData when the database is updated.
      * */
-    @Query("SELECT * from word_table ORDER BY word ASC")
+    @Query("SELECT * from word_table ORDER BY urgency ASC")
     fun getAlphabetizedWords(): LiveData<List<Word>>
 
 
