@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_catalog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="#000000">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/empty_catalog_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/note_icon"
+         />
+
+    <TextView
+        android:id="@+id/text_view_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empty_catalog_image"
+        android:gravity="center"
+        android:text="No notes available"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subtitle_text_view_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_item"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:text="Start by adding a note"
+        android:textSize="15sp" />
+
+</RelativeLayout>
