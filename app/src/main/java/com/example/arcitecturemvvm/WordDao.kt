@@ -12,7 +12,15 @@ import androidx.room.*
 interface WordDao {
     //addition
     @Delete
-    suspend fun delete(word : Word)
+    suspend fun delete(note : Word)
+
+
+//    @Query("SELECT COUNT(id) FROM word_table")
+//    suspend fun getCount()
+
+//    @Query ("DELETE FROM word_table WHERE rowId = id")
+//    suspend fun delete_one_row(id : Long)
+
 
     /**
      * fun getAlphabetizedWords(): List<Word>: A method to get all the words and have it return a List of Words.
@@ -24,7 +32,8 @@ interface WordDao {
      * Use a return value of type LiveData in your method description,
      * and Room generates all necessary code to update the LiveData when the database is updated.
      * */
-    @Query("SELECT * from word_table ORDER BY urgency ASC")
+//    @Query("SELECT * from word_table ORDER BY urgency ASC")
+    @Query("SELECT * from word_table")
     fun getAlphabetizedWords(): LiveData<List<Word>>
 
 

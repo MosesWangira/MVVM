@@ -3,49 +3,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#000000"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/note_it"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_your_note_to_save"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/creepster"
+        android:gravity="center_horizontal"/>
 
 
     <EditText
         android:id="@+id/title_word"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="@dimen/big_padding"
+        android:paddingLeft="10dp"
         android:layout_marginBottom="@dimen/big_padding"
         android:hint="@string/title"
         android:maxLength="25"
+        android:background="@drawable/editext_background"
         android:inputType="textAutoComplete"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:padding="@dimen/small_padding"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
     <EditText
         android:id="@+id/edit_word"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
+        android:paddingLeft="10dp"
+        android:gravity="start"
         android:layout_marginTop="@dimen/big_padding"
         android:layout_marginBottom="@dimen/big_padding"
+        android:background="@drawable/editext_background"
         android:hint="@string/hint_word"
         android:inputType="textMultiLine"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         android:padding="@dimen/small_padding"
-        android:textSize="18sp" />
+        android:textSize="12sp" />
 
-    <EditText
-        android:id="@+id/urgency_word"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/big_padding"
-        android:layout_marginBottom="@dimen/big_padding"
-        android:hint="@string/urgency"
-        android:inputType="number"
-        android:padding="@dimen/small_padding"
-        android:textSize="18sp" />
+<!--    <EditText-->
+<!--        android:id="@+id/urgency_word"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="@dimen/big_padding"-->
+<!--        android:layout_marginBottom="@dimen/big_padding"-->
+<!--        android:background="@drawable/editext_background"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:hint="@string/urgency"-->
+<!--        android:inputType="number"-->
+<!--        android:padding="@dimen/small_padding"-->
+<!--        android:textSize="12sp" />-->
 
 
     <Button
         android:id="@+id/button_save"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:background="@drawable/login_button_blue_background"
         android:text="@string/button_save"
+        android:fontFamily="@font/creepster"
         android:textColor="@color/buttonLabel" />
 </LinearLayout>

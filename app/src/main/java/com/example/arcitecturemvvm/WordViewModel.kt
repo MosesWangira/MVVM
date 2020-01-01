@@ -46,4 +46,12 @@ class WordViewModel(application: Application) : AndroidViewModel(application) {
         repository.deleteAll()
     }
 
+//    fun getCount() = viewModelScope.launch {
+//        repository.getCount()
+//    }
+
+    fun delete(note: Word) = viewModelScope.launch {
+        repository.delete(note)
+    }
+
 }

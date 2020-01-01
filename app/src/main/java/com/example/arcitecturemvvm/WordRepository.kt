@@ -1,6 +1,5 @@
 package com.example.arcitecturemvvm
 
-import android.icu.text.CaseMap
 import androidx.lifecycle.LiveData
 
 /**
@@ -27,9 +26,16 @@ class WordRepository(private val wordDao: WordDao) {
     }
 
 
-    //addition
     suspend fun deleteAll() {
         wordDao.deleteAll()
+    }
+
+//    suspend fun getCount(){
+//        wordDao.getCount()
+//    }
+
+    suspend fun delete(note: Word) {
+        wordDao.delete(note)
     }
 
 }

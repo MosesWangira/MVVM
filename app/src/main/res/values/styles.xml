@@ -5,17 +5,22 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#212121</item>
         <item name="colorPrimaryDark">#212121</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#212121</item>
     </style>
 
     <!-- The default font for RecyclerView items is too small.
 The margin is a simple delimiter between the words. -->
-    <style name="word_title">
-        <item name="android:layout_width">match_parent</item>
+    <style name="font">
+        <item name="android:textSize">@dimen/textSize</item>
 <!--        <item name="android:layout_marginBottom">8dp</item>-->
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:background">@android:color/holo_orange_light</item>
-        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+<!--        <item name="android:paddingLeft">8dp</item>-->
+<!--        <item name="android:background">@android:color/holo_orange_light</item>-->
+<!--        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>-->
+    </style>
+
+
+    <style name="createOptionMenu" parent="Theme.AppCompat.Light">
+        <item name="android:actionMenuTextAppearance">@style/font</item>
     </style>
 
 </resources>

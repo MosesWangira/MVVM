@@ -9,13 +9,14 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.room.Room
 
 
 class NewWordActivity : AppCompatActivity() {
 
     private lateinit var editWordView: EditText
     private lateinit var editTitleView: EditText
-    private lateinit var editUrgencyView: EditText
+//    private lateinit var editUrgencyView: EditText
 
     private lateinit var wordViewModel: WordViewModel
 
@@ -26,19 +27,9 @@ class NewWordActivity : AppCompatActivity() {
 
         editWordView = findViewById(R.id.edit_word)
         editTitleView = findViewById(R.id.title_word)
-        editUrgencyView = findViewById(R.id.urgency_word)
+//        editUrgencyView = findViewById(R.id.urgency_word)
 
         wordViewModel = ViewModelProvider(this).get(WordViewModel::class.java)
-
-//        val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-//        val adapter = WordListAdapter(this)
-//        recyclerView.adapter = adapter
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//
-//        wordViewModel.allWords.observe(this, Observer { words ->
-//            // Update the cached copy of the words in the adapter.
-//            words?.let { adapter.setWords(it) }
-//        })
 
 
         val button = findViewById<Button>(R.id.button_save)
@@ -50,12 +41,11 @@ class NewWordActivity : AppCompatActivity() {
             } else {
                 val word = editWordView.text.toString()
                 val title = editTitleView.text.toString()
-                val urgent = editUrgencyView.text.toString()
 
-                val urgentToInt = urgent.toInt()
+//                val urgentToInt = urgent.toInt()
 
 
-                val myInsert = Word(word, title, urgentToInt)
+                val myInsert = Word(word, title)
                 wordViewModel.insert(myInsert)
 //                var db= Room.databaseBuilder(applicationContext,WordRoomDatabase::class.java,"WordDB").build()
 
@@ -65,18 +55,19 @@ class NewWordActivity : AppCompatActivity() {
 //                    bookEntity.word = "bye"
 //                    db.wordDao().insert(bookEntity)
 
-                    replyIntent.putExtra(EXTRA_REPLY, word)
-//                replyIntent.putExtra(EXTRA_SEND, title)
-//                setResult(Activity.RESULT_OK, replyIntent)
+//                    replyIntent.putExtra(EXTRA_WORD, word)
+//                    replyIntent.putExtra(EXTRA_TITLE, title)
+//
+                setResult(Activity.RESULT_OK, replyIntent)
             }
             finish()
         }
     }
 
     companion object {
-        const val EXTRA_REPLY = "com.example.android.wordlistsql.REPLY"
+        const val EXTRA_WORD = "com.example.arcitecturemvvm.WORD"
+        const val EXTRA_TITLE = "com.example.arcitecturemvvm.TITLE"
     }
-
 
 }
 

@@ -1,13 +1,17 @@
 package com.example.arcitecturemvvm
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -30,7 +34,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
+
+//        val emptyView: View = findViewById(R.id.empty_catalog)
+
+
         val adapter = WordListAdapter(this)
+
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -47,16 +56,39 @@ class MainActivity : AppCompatActivity() {
         })
 
 
+
+        ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+            0,
+            ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+        ) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                viewHolder1: RecyclerView.ViewHolder
+            ): Boolean {
+                return false
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, i: Int) {
+                wordViewModel.delete(adapter.getWordAt(viewHolder.adapterPosition))
+                Toast.makeText(this@MainActivity, "Note deleted", Toast.LENGTH_SHORT).show()
+            }
+        }).attachToRecyclerView(recyclerView)
+
     }
+
 
 //    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 //        super.onActivityResult(requestCode, resultCode, data)
 //
-//        if  (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
-//            data?.getStringExtra(NewWordActivity.EXTRA_REPLY)?.let {
-//                val word = Word(it, "title")
-//                wordViewModel.insert(word)
-//            }
+//        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
+//            val wordy = data?.getStringExtra(NewWordActivity.EXTRA_WORD)
+//            val titley = data?.getStringExtra(NewWordActivity.EXTRA_TITLE)
+//
+//            val word = Word(wordy!!, titley!!)
+//            wordViewModel.insert(word)
+//            Toast.makeText(this, "note saved", Toast.LENGTH_SHORT).show()
+//
 //        } else {
 //            Toast.makeText(
 //                applicationContext,
@@ -64,6 +96,7 @@ class MainActivity : AppCompatActivity() {
 //                Toast.LENGTH_LONG
 //            ).show()
 //        }
+//    }
 //    }
 
     /**
