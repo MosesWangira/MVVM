@@ -15,7 +15,10 @@ class Word (
     var word : String,
 
     @ColumnInfo(name = "title")
-    var title: String
+    var title: String,
+
+    @ColumnInfo(name = "Date")
+    var date: String
 //    var urgency: Int
 ){
     @PrimaryKey(autoGenerate = true)

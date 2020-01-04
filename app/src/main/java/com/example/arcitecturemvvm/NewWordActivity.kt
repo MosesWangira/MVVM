@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class NewWordActivity : AppCompatActivity() {
@@ -39,13 +41,17 @@ class NewWordActivity : AppCompatActivity() {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
                 Toast.makeText(this, "Can not save empty fields", Toast.LENGTH_SHORT).show()
             } else {
+
                 val word = editWordView.text.toString()
                 val title = editTitleView.text.toString()
 
 //                val urgentToInt = urgent.toInt()
 
+                val sdf = SimpleDateFormat("dd MMM,yyyy hh:mm:ss")
+                val currentDate = sdf.format(Date())
 
-                val myInsert = Word(word, title)
+
+                val myInsert = Word(word, title, currentDate)
                 wordViewModel.insert(myInsert)
 //                var db= Room.databaseBuilder(applicationContext,WordRoomDatabase::class.java,"WordDB").build()
 

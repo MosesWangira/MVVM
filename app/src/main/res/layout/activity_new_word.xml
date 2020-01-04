@@ -20,7 +20,7 @@
         android:textColor="#ffffff"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:fontFamily="@font/creepster"
+        android:fontFamily="@font/chewy"
         android:gravity="center_horizontal"/>
 
 
@@ -56,19 +56,19 @@
         android:padding="@dimen/small_padding"
         android:textSize="12sp" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/urgency_word"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_marginTop="@dimen/big_padding"-->
-<!--        android:layout_marginBottom="@dimen/big_padding"-->
-<!--        android:background="@drawable/editext_background"-->
-<!--        android:layout_marginRight="10dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:hint="@string/urgency"-->
-<!--        android:inputType="number"-->
-<!--        android:padding="@dimen/small_padding"-->
-<!--        android:textSize="12sp" />-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/urgency_word"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginTop="@dimen/big_padding"-->
+    <!--        android:layout_marginBottom="@dimen/big_padding"-->
+    <!--        android:background="@drawable/editext_background"-->
+    <!--        android:layout_marginRight="10dp"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:hint="@string/urgency"-->
+    <!--        android:inputType="number"-->
+    <!--        android:padding="@dimen/small_padding"-->
+    <!--        android:textSize="12sp" />-->
 
 
     <Button

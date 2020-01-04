@@ -17,6 +17,7 @@ class WordListAdapter internal constructor(
     inner class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val wordTitleView: TextView = itemView.findViewById(R.id.titleView)
         val wordItemView: TextView = itemView.findViewById(R.id.textView)
+        val wordDateView: TextView = itemView.findViewById(R.id.dateView)
 //        val urgencyItemView: TextView = itemView.findViewById(R.id.urgencyView)
     }
 
@@ -30,6 +31,7 @@ class WordListAdapter internal constructor(
 //        holder.urgencyItemView.text= current.urgency.toString()
         holder.wordTitleView.text = current.title
         holder.wordItemView.text = current.word
+        holder.wordDateView.text = current.date
     }
 
     fun getWordAt(position: Int): Word {

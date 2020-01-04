@@ -48,8 +48,8 @@ abstract class WordRoomDatabase : RoomDatabase() {
             // Delete all content here.
             wordDao.deleteAll()
 
-            var word = Word("Moses", "Android Developer")
-            wordDao.insert(word)
+//            val word = Word("Moses", "Android Developer")
+//            wordDao.insert(word)
             /**
              * // Add sample words.
              * var word = Word("Hello")
