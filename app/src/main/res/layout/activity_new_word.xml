@@ -18,9 +18,8 @@
         android:layout_height="wrap_content"
         android:text="@string/enter_your_note_to_save"
         android:textColor="#ffffff"
-        android:textSize="25sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:fontFamily="@font/chewy"
         android:gravity="center_horizontal"/>
 
 
@@ -77,10 +76,8 @@
         android:layout_height="40dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:textAllCaps="false"
         android:textSize="15sp"
         android:background="@drawable/login_button_blue_background"
         android:text="@string/button_save"
-        android:fontFamily="@font/creepster"
         android:textColor="@color/buttonLabel" />
 </LinearLayout>
