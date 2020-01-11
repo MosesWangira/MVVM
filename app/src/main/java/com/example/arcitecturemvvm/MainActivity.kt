@@ -68,14 +68,14 @@ class MainActivity : AppCompatActivity()  {
                 viewHolder: RecyclerView.ViewHolder,
                 viewHolder1: RecyclerView.ViewHolder
             ): Boolean {
-                return true
+                return false
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, i: Int) {
                 wordViewModel.delete(adapter.getWordAt(viewHolder.adapterPosition))
                 //testing suspend functions
                 toast("note deleted")
-            } 
+            }
         }).attachToRecyclerView(recyclerView)
 
     }
