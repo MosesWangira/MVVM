@@ -62,4 +62,7 @@ dependencies {
 
     // Testing
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+
+    //picasso library
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
