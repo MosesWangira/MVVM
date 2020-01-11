@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
+import com.example.arcitecturemvvm.Util.toast
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -53,17 +54,8 @@ class NewWordActivity : AppCompatActivity() {
 
                 val myInsert = Word(word, title, currentDate)
                 wordViewModel.insert(myInsert)
-//                var db= Room.databaseBuilder(applicationContext,WordRoomDatabase::class.java,"WordDB").build()
-
-//                val thread = Thread {
-//                    var bookEntity = Word()
-//                    bookEntity.title = "hello"
-//                    bookEntity.word = "bye"
-//                    db.wordDao().insert(bookEntity)
-
-//                    replyIntent.putExtra(EXTRA_WORD, word)
-//                    replyIntent.putExtra(EXTRA_TITLE, title)
-//
+                toast("note saved successfully")
+//                    replyIntent.putExtra(EXTRA_WORD, word
                 setResult(Activity.RESULT_OK, replyIntent)
             }
             finish()

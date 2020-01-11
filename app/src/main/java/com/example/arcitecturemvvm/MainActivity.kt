@@ -14,10 +14,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.arcitecturemvvm.Util.toast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.runBlocking
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()  {
 
     private lateinit var wordViewModel: WordViewModel
     private val newWordActivityRequestCode = 1
@@ -66,13 +68,14 @@ class MainActivity : AppCompatActivity() {
                 viewHolder: RecyclerView.ViewHolder,
                 viewHolder1: RecyclerView.ViewHolder
             ): Boolean {
-                return false
+                return true
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, i: Int) {
                 wordViewModel.delete(adapter.getWordAt(viewHolder.adapterPosition))
-                Toast.makeText(this@MainActivity, "Note deleted", Toast.LENGTH_SHORT).show()
-            }
+                //testing suspend functions
+                toast("note deleted")
+            } 
         }).attachToRecyclerView(recyclerView)
 
     }
