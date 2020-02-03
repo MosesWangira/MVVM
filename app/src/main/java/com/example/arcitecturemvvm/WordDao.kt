@@ -1,6 +1,5 @@
 package com.example.arcitecturemvvm
 
-import android.icu.text.CaseMap
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
@@ -57,6 +56,13 @@ interface WordDao {
      * */
     @Query("DELETE  FROM word_table")
     suspend fun deleteAll()
+
+
+    /**
+     * @Query update
+     * */
+    @Update
+    abstract fun update(word: Word)
 }
 
 

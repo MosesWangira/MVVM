@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity()  {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
 
+
 //        val emptyView: View = findViewById(R.id.empty_catalog)
 
 
@@ -65,7 +66,6 @@ class MainActivity : AppCompatActivity()  {
         })
 
 
-
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
             0,
             ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
@@ -84,6 +84,26 @@ class MainActivity : AppCompatActivity()  {
                 toast("note deleted")
             }
         }).attachToRecyclerView(recyclerView)
+
+
+
+
+//        val id = data!!.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1)
+//
+//        if (id == -1) {
+//            Toast.makeText(this, "Note can't be updated", Toast.LENGTH_SHORT).show()
+//            return
+//        }
+//
+//        val title = data!!.getStringExtra(AddEditNoteActivity.EXTRA_TITLE)
+//        val description = data!!.getStringExtra(AddEditNoteActivity.EXTRA_DESCRIPTION)
+//        val priority = data!!.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITY, 1)
+//
+//        val note = Note(title, description, priority)
+//        note.setD(id)
+//        noteViewModel.update(note)
+//
+//        Toast.makeText(this, "Note updated", Toast.LENGTH_SHORT).show()
 
     }
 

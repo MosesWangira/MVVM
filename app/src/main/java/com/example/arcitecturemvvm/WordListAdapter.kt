@@ -31,7 +31,7 @@ class WordListAdapter internal constructor(
 //        holder.urgencyItemView.text= current.urgency.toString()
         holder.wordTitleView.text = current.title
         holder.wordItemView.text = current.word
-        holder.wordDateView.text = current.date
+        holder.wordDateView.text = " Date created - ${current.date}"
     }
 
     fun getWordAt(position: Int): Word {
