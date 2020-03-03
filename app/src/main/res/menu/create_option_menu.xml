@@ -5,6 +5,8 @@
         android:title="@string/delete_all"
         android:textSize="10sp"
         app:showAsAction="never"
-        android:theme="@style/createOptionMenu"
+        android:actionMenuTextAppearance="@style/AppThemeActivity"
         />
 </menu>
+
+    <!--        android:theme="@style/createOptionMenu"-->

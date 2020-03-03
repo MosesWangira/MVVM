@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#01579B</item>
-        <item name="colorPrimaryDark">#01579B</item>
-        <item name="colorAccent">#01579B</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
     </style>
 
     <!-- The default font for RecyclerView items is too small.
@@ -19,8 +19,8 @@ The margin is a simple delimiter between the words. -->
     </style>
 
 
-    <style name="createOptionMenu" parent="Theme.AppCompat.Light">
-        <item name="android:actionMenuTextAppearance">@style/font</item>
+    <style name="AppThemeActivity" parent="Theme.AppCompat.Light">
+        <item name="android:actionMenuTextAppearance">@dimen/textSize</item>
     </style>
 
 </resources>
