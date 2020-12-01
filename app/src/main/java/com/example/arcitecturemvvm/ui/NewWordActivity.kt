@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.arcitecturemvvm.R
-import com.example.arcitecturemvvm.Util.toast
+import com.example.arcitecturemvvm.util.toast
 import com.example.arcitecturemvvm.data.model.Word
 import com.example.arcitecturemvvm.viewModel.WordViewModel
 import java.text.SimpleDateFormat

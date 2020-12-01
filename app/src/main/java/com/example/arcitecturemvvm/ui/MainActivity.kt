@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.arcitecturemvvm.R
-import com.example.arcitecturemvvm.Util.toast
+import com.example.arcitecturemvvm.util.toast
 import com.example.arcitecturemvvm.data.adapters.WordListAdapter
 import com.example.arcitecturemvvm.viewModel.WordViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton

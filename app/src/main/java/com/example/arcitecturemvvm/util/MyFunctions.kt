@@ -1,4 +1,4 @@
-package com.example.arcitecturemvvm.Util
+package com.example.arcitecturemvvm.util
 
 import android.content.Context
 import android.widget.Toast
