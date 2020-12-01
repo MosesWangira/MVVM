@@ -8,5 +8,3 @@
         android:actionMenuTextAppearance="@style/AppThemeActivity"
         />
 </menu>
-
-    <!--        android:theme="@style/createOptionMenu"-->

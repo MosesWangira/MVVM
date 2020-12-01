@@ -1,7 +1,8 @@
-package com.example.arcitecturemvvm
+package com.example.arcitecturemvvm.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.arcitecturemvvm.data.model.Word
 
 
 /**

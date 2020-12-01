@@ -1,6 +1,8 @@
-package com.example.arcitecturemvvm
+package com.example.arcitecturemvvm.repository
 
 import androidx.lifecycle.LiveData
+import com.example.arcitecturemvvm.data.model.Word
+import com.example.arcitecturemvvm.database.WordDao
 
 /**
  * Declares the DAO as a private property in the constructor. Pass in the DAO

@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NewWordActivity"
+        <activity android:name=".ui.NewWordActivity"
             android:label="New Note"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity"
+            android:parentActivityName=".ui.MainActivity"/>
+        <activity android:name=".ui.MainActivity"
             android:label="Note App">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

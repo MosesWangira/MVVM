@@ -1,4 +1,4 @@
-package com.example.arcitecturemvvm
+package com.example.arcitecturemvvm.data.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -1,10 +1,11 @@
-package com.example.arcitecturemvvm
+package com.example.arcitecturemvvm.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.arcitecturemvvm.data.model.Word
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

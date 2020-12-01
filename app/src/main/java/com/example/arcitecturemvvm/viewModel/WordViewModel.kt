@@ -1,9 +1,12 @@
-package com.example.arcitecturemvvm
+package com.example.arcitecturemvvm.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.arcitecturemvvm.data.model.Word
+import com.example.arcitecturemvvm.repository.WordRepository
+import com.example.arcitecturemvvm.database.WordRoomDatabase
 import kotlinx.coroutines.launch
 
 /**

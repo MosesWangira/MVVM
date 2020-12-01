@@ -1,12 +1,13 @@
-package com.example.arcitecturemvvm
+package com.example.arcitecturemvvm.data.adapters
 
 import android.content.Context
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.arcitecturemvvm.R
+import com.example.arcitecturemvvm.data.model.Word
 
 class WordListAdapter internal constructor(
     context: Context

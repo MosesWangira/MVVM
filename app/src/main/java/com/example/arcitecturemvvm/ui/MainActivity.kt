@@ -1,32 +1,29 @@
-package com.example.arcitecturemvvm
+package com.example.arcitecturemvvm.ui
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.arcitecturemvvm.R
 import com.example.arcitecturemvvm.Util.toast
+import com.example.arcitecturemvvm.data.adapters.WordListAdapter
+import com.example.arcitecturemvvm.viewModel.WordViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.squareup.picasso.Picasso
-import kotlinx.coroutines.runBlocking
 
 
 class MainActivity : AppCompatActivity()  {
 
     lateinit var fab_icon : ImageView
     private lateinit var wordViewModel: WordViewModel
-    private val newWordActivityRequestCode = 1
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -38,7 +35,6 @@ class MainActivity : AppCompatActivity()  {
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             val intent = Intent(this@MainActivity, NewWordActivity::class.java)
-//            startActivityForResult(intent, newWordActivityRequestCode)
             startActivity(intent)
         }
 
@@ -86,48 +82,7 @@ class MainActivity : AppCompatActivity()  {
         }).attachToRecyclerView(recyclerView)
 
 
-
-
-//        val id = data!!.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1)
-//
-//        if (id == -1) {
-//            Toast.makeText(this, "Note can't be updated", Toast.LENGTH_SHORT).show()
-//            return
-//        }
-//
-//        val title = data!!.getStringExtra(AddEditNoteActivity.EXTRA_TITLE)
-//        val description = data!!.getStringExtra(AddEditNoteActivity.EXTRA_DESCRIPTION)
-//        val priority = data!!.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITY, 1)
-//
-//        val note = Note(title, description, priority)
-//        note.setD(id)
-//        noteViewModel.update(note)
-//
-//        Toast.makeText(this, "Note updated", Toast.LENGTH_SHORT).show()
-
     }
-
-
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//
-//        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
-//            val wordy = data?.getStringExtra(NewWordActivity.EXTRA_WORD)
-//            val titley = data?.getStringExtra(NewWordActivity.EXTRA_TITLE)
-//
-//            val word = Word(wordy!!, titley!!)
-//            wordViewModel.insert(word)
-//            Toast.makeText(this, "note saved", Toast.LENGTH_SHORT).show()
-//
-//        } else {
-//            Toast.makeText(
-//                applicationContext,
-//                R.string.empty_not_saved,
-//                Toast.LENGTH_LONG
-//            ).show()
-//        }
-//    }
-//    }
 
     /**
      * create option menu
@@ -161,16 +116,3 @@ class MainActivity : AppCompatActivity()  {
 
 
 }
-
-//                val intent = intent
-//                val tit = intent.getStringExtra(NewWordActivity.EXTRA_REPLY1)
-
-
-//                val extras = data.extras
-//                val my_title = extras!!.getString("EXTRA_SEND")
-//
-//                val m = data.getStringExtra("EXTRA_SEND")
-//                val title_of_note=intent.getStringExtra("TITLE")
-
-//                val profileName=intent.getStringExtra("Username")
-//                Toast.makeText(this@MainActivity, profileName, Toast.LENGTH_SHORT).show()
