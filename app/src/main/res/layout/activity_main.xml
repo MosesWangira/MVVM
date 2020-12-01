@@ -27,7 +27,4 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp" />
 
-<!--    <include layout="@layout/empty_catalog" />-->
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

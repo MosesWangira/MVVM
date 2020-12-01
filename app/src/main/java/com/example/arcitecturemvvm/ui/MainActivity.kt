@@ -30,18 +30,14 @@ class MainActivity : AppCompatActivity()  {
 
 
         fab_icon = findViewById(R.id.fab)
-        Picasso.with(this).load(R.drawable.note_it).into(fab_icon)
+        Picasso.with(this).load(R.drawable.add_note).into(fab_icon)
 
-        val fab = findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener {
+        fab_icon.setOnClickListener {
             val intent = Intent(this@MainActivity, NewWordActivity::class.java)
             startActivity(intent)
         }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-
-
-//        val emptyView: View = findViewById(R.id.empty_catalog)
 
 
         val adapter = WordListAdapter(this)

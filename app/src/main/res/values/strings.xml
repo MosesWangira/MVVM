@@ -6,6 +6,6 @@
     <string name="delete_all">Delete all</string>
     <string name="title">Title</string>
     <string name="urgency">urgency</string>
-    <string name="enter_your_note_to_save">Enter your note to save</string>
+    <string name="enter_your_note_to_save">Write down your note</string>
     <string name="delete_by_title">Delete by Title</string>
 </resources>
