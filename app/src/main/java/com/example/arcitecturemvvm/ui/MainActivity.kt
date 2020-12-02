@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity()  {
 
 
         fab_icon = findViewById(R.id.fab)
-        Picasso.with(this).load(R.drawable.add_note).into(fab_icon)
 
         fab_icon.setOnClickListener {
             val intent = Intent(this@MainActivity, NewWordActivity::class.java)

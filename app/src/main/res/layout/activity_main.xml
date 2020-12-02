@@ -24,6 +24,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
+        app:srcCompat="@drawable/add_note"
         android:layout_height="wrap_content"
         android:layout_margin="16dp" />
 

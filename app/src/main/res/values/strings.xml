@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RoomWordSample</string>
+    <string name="app_name">Note App</string>
     <string name="hint_word">Content</string>
     <string name="button_save">Save Note</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
@@ -8,4 +8,6 @@
     <string name="urgency">urgency</string>
     <string name="enter_your_note_to_save">Write down your note</string>
     <string name="delete_by_title">Delete by Title</string>
+    <string name="splashimage">splashImage</string>
+    <string name="note_it_down">Note it down</string>
 </resources>

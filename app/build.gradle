@@ -16,6 +16,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //Jet pack support library for vector drawables down up to api level 7
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
