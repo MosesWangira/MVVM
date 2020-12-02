@@ -16,7 +16,7 @@ Functionality<br>
 ## Download App
 The link to this app can be downloaded here : <a href ="https://drive.google.com/file/d/1rP1Qun5v4IGtKxQtSIqBsUp5TMDkjCAD/view?usp=sharing">Click here to download</a>
 <br>
-supports devices with min sdk version 15+
+Min sdk version 15+
 
 ## App visual images
 ### splash screen
