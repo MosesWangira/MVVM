@@ -52,7 +52,7 @@ Min sdk version 15+
 You need a laptop and latest release of android studio(preferred)
 
 ## Usage
-Clone this project using this link <a href = "https://github.com/MosesWangira/Covid.git">https://github.com/MosesWangira/Covid.git</a><br>
+Clone this project using this link <a href = "https://github.com/MosesWangira/MVVM.git">https://github.com/MosesWangira/MVVM.git</a><br>
 Open the project using android studio
 
 
