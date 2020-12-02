@@ -15,6 +15,7 @@ Functionality<br>
 
 ## Download App
 The link to this app can be downloaded here : <a href ="https://drive.google.com/file/d/1rP1Qun5v4IGtKxQtSIqBsUp5TMDkjCAD/view?usp=sharing">Click here to download</a>
+<br>
 supports devices with min sdk version 15+
 
 ## App visual images
@@ -42,7 +43,7 @@ supports devices with min sdk version 15+
         Room - Offline data persistence.
       </li>
     </ul>
-  <li><a href ="https://square.github.io/retrofit/">Retrofit</a> -  retrieving JSON via a REST based webservice.</li>
+ 
   <li>Material Design -  Build a nice looking UI.</li>
 </ul>
  
