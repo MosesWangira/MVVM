@@ -25,7 +25,7 @@ Min sdk version 15
 ### Home
 <img src = "images/homy.png" width = "300"/> <img src = "images/delete.png" width = "300"/>
 
-### prevention
+### New Note
 <img src = "images/new.png" width = "300"/>
 <br>
 
